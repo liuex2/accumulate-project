@@ -14,5 +14,5 @@ server:
     context-path: /accumulate
 
 person:
-  name: liuxincai
+  name: liuex2
   age: 24
