@@ -1,0 +1,18 @@
+##springboot##
+spring:
+  profiles:
+    active: dev
+
+
+##springboot##
+##### Server #####
+server:
+  port: 8081
+  tomcat:
+    uri-encoding: utf-8
+  servlet:
+    context-path: /accumulate
+
+person:
+  name: liuxincai
+  age: 24
