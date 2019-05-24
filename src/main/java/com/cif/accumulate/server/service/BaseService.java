@@ -6,4 +6,5 @@ package com.cif.accumulate.server.service;
  * @Date: 2019/5/24 18:24
  */
 public interface BaseService {
+
 }
