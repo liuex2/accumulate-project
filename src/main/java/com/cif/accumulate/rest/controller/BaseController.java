@@ -1,4 +1,4 @@
-package com.cif.accumulate.server.controller;
+package com.cif.accumulate.rest.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 
