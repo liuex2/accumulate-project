@@ -1,13 +1,11 @@
 package com.cif.accumulate.rest.vo;
 
-import java.io.Serializable;
-
 /**
  * @Author: liuxincai
- * @Description: Base VO
- * @Date: 2019/5/27 20:40
+ * @Description: the base page VO
+ * @Date: 2019/5/29 16:06
  */
-public class BaseVO implements Serializable {
+public class BasePageVO {
     private static final Integer DEFAULT_PAGE_SIZE = 20;
     private static final Integer DEFAULT_FIRST_PAGE = 1;
 

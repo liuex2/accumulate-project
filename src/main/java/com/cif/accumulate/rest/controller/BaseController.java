@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @Author: liuxincai
- * @Description: 基础控制器
+ * @Description: base controller
  * @Date: 2019/5/25 11:49
  */
 @RestController
