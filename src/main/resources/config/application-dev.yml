@@ -1,0 +1,56 @@
+##### MySQL#####
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/world?tinyInt1isBit=false&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: root
+
+    autoCommit: false
+    initial-size: 10 #配置初始化大小、最小、最大
+    minIdle: 10
+    maxActive: 50
+    maxWait: 60000 #配置获取连接等待超时的时间
+    timeBetweenEvictionRunsMillis: 60000 #配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+    minEvictableIdleTimeMillis: 300000 #配置一个连接在池中最小生存的时间，单位是毫秒
+
+    validationQuery: select 1
+    testWhileIdle: true
+    testOnBorrow: true
+    testOnReturn: true
+    connectionInitSql: select 1
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    timeout: 10000
+  jedis:
+    pool:
+      #最大连接数
+      max-active: 1024
+      #最大阻塞等待时间(负数表示没限制)
+      max-wait: 20000
+      #最大空闲
+      max-idle: 200
+      #最小空闲
+      min-idle: 10
+      #连接超时时间
+  ##### 统一日期转换 #####
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+logging:
+  level:
+    com:
+      looedu:
+        mapper: debug
+
+  mvc:
+    static-path-pattern: /**
+
+## 该配置节点为独立的节点，容易将这个配置放在spring的节点下，导致配置无法被识别
+mybatis:
+  mapper-locations: classpath:mapper/*.xml  #注意：一定要对应mapper映射xml文件的所在路径
+  type-aliases-package: com.cif.pc.pojo  # 注意：对应实体类的路径
