@@ -1,4 +1,4 @@
-package com.cif.accumulate.config;
+package com.cif.accumulate.config.annotation;
 
 /**
  * 自定义注解使用接口案例

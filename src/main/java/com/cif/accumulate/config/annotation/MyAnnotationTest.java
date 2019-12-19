@@ -1,4 +1,4 @@
-package com.cif.accumulate.config;
+package com.cif.accumulate.config.annotation;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
@@ -17,9 +17,9 @@ public class MyAnnotationTest {
     }
 
     private void getAnnotation() throws ClassNotFoundException {
-        Class<?> aClass = Class.forName("com.cif.accumulate.config.MessageImpl");
+        Class<?> aClass = Class.forName("com.cif.accumulate.config.annotation.MessageImpl");
         //判断aClass是否使用了MyAnnotaion注解
-        boolean presentAnnotation = aClass.isAnnotationPresent(com.cif.accumulate.config.MyAnnotation.class);
+        boolean presentAnnotation = aClass.isAnnotationPresent(MyAnnotation.class);
         if(presentAnnotation){
             annotations = aClass.getAnnotations();
             out(annotations,null);
@@ -30,7 +30,7 @@ public class MyAnnotationTest {
         System.out.println("method");
         for(Method m : methods){
             //判断aClass是否使用了MyAnnotaion注解
-            boolean presentAnnotation2 = aClass.isAnnotationPresent(com.cif.accumulate.config.MyAnnotation.class);
+            boolean presentAnnotation2 = aClass.isAnnotationPresent(MyAnnotation.class);
             if(presentAnnotation2){
                 annotations = m.getAnnotations();
                 out(annotations,m);

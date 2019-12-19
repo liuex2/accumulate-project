@@ -1,4 +1,4 @@
-package com.cif.accumulate.config;
+package com.cif.accumulate.config.annotation;
 
 import java.lang.annotation.*;
 
